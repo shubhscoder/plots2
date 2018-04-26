@@ -31,4 +31,4 @@ RUN bundle install --jobs 4
 ADD . /app
 WORKDIR /app
 
-RUN yarn
+RUN yarn --modules-folder public/lib
