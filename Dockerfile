@@ -32,4 +32,6 @@ RUN bundle install --jobs 4
 ADD . /app
 WORKDIR /app
 
+RUN yarn --ignore-engines --ignore-scripts --modules-folder public/lib && yarn postinstall
+
 RUN yarn --modules-folder public/lib
